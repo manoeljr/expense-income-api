@@ -23,6 +23,8 @@ REST = ['rest_framework',]
 
 INSTALLED_APPS =  DJANGO_APPS + APPS + REST
 
+AUTH_USER_MODEL = 'authentication.User'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
