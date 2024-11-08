@@ -1,5 +1,7 @@
 from pathlib import Path
 
+from django.core.exceptions import NON_FIELD_ERRORS
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-dp2oth@-^zj7)yu)!mm5%k3=u&0nqq(9yzva*idu*ik$ziol1d'
@@ -88,3 +90,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'NON_FIELD_ERRORS_KEY': 'error',
+}
